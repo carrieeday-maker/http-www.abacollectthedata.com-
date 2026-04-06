@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABA Collect the Data — Free Tools, Guides & Videos</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════
+   DESIGN SYSTEM
+═══════════════════════════════════════════════════════ */
+:root {
+  --bg:        #fefcf8;
+  --surface:   #ffffff;
+  --s2:        #f9f6f1;
+  --s3:        #f2ede4;
+  --border:    #e8e0d4;
+  --border2:   #d8cfc2;
+  --ink:       #2c2416;
+  --ink2:      #4a3f30;
+  --muted:     #8c7f6e;
+  --muted2:    #b5a898;
+  --teal:      #2a7d6f;
+  --teal-l:    #e8f5f2;
+  --teal-m:    #b8ddd8;
+  --coral:     #d95f3b;
+  --coral-l:   #fdf0ec;
+  --coral-m:   #f4c4b4;
+  --gold:      #c49a2a;
+  --gold-l:    #fdf8ec;
+  --gold-m:    #e8d49a;
+  --violet:    #6b4fa0;
+  --violet-l:  #f2eefa;
+  --violet-m:  #cfc0e8;
+  --sans:      'Nunito', sans-serif;
+  --serif:     'Lora', Georgia, serif;
+  --shadow:    0 2px 16px rgba(44,36,22,0.07);
+  --shadow-lg: 0 8px 40px rgba(44,36,22,0.11);
+  --radius:    16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+/* ── NAV ── */
+nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 12px rgba(44,36,22,0.06);
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  height: 64px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-mark {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--teal), #3da898);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.nav-logo-name {
+  font-family: var(--serif); font-size: 1.15rem; font-weight: 700;
+  color: var(--ink); letter-spacing: -0.01em;
+}
+.nav-logo-tagline { font-size: 0.65rem; color: var(--muted); margin-top: -2px; }
+.nav-links { display: flex; gap: 4px; }
+.nav-link {
+  padding: 7px 14px; border-radius: 8px;
+  font-size: 0.82rem; font-weight: 600; color: var(--muted);
+  text-decoration: none; transition: all 0.2s; cursor: pointer;
+}
+.nav-link:hover, .nav-link.active { background: var(--s2); color: var(--teal); }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(160deg, #f0faf8 0%, #fefcf8 50%, #fdf8f0 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 64px 24px 56px;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(42,125,111,0.07), transparent);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  display: inline-block;
+  background: var(--teal-l); color: var(--teal);
+  border: 1px solid var(--teal-m);
+  border-radius: 20px; padding: 4px 14px;
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: var(--serif); font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700; color: var(--ink); line-height: 1.2;
+  letter-spacing: -0.02em; margin-bottom: 16px; max-width: 700px; margin-left: auto; margin-right: auto;
+}
+.hero h1 em { font-style: italic; color: var(--teal); }
+.hero-sub {
+  font-size: 1.05rem; color: var(--ink2); max-width: 560px;
+  margin: 0 auto 32px; line-height: 1.65;
+}
+.hero-pills { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.hero-pill {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: 7px 16px;
+  font-size: 0.8rem; font-weight: 600; color: var(--ink2);
+  box-shadow: var(--shadow); cursor: pointer; transition: all 0.2s;
+  text-decoration: none;
+}
+.hero-pill:hover { border-color: var(--teal); color: var(--teal); transform: translateY(-1px); }
+
+/* ── PAGE WRAPPER ── */
+.page { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* ── SECTION TITLES ── */
+.section-eyebrow {
+  font-size: 0.65rem; font-weight: 800; color: var(--teal);
+  text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px;
+}
+.section-title {
+  font-family: var(--serif); font-size: 1.75rem; font-weight: 700;
+  color: var(--ink); letter-spacing: -0.02em; margin-bottom: 8px;
+}
+.section-sub { font-size: 0.92rem; color: var(--muted); max-width: 500px; }
+
+/* ── OVERVIEW CARDS ── */
+.overview-section { padding: 56px 0 16px; }
+.overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 14px; margin-top: 28px; }
+.overview-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 22px;
+  box-shadow: var(--shadow); transition: all 0.2s; cursor: pointer;
+  text-decoration: none; display: block;
+}
+.overview-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: var(--border2); }
+.ov-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; margin-bottom: 12px;
+}
+.ov-num {
+  font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+.ov-name { font-family: var(--serif); font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+.ov-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+.ov-tag {
+  display: inline-block; margin-top: 10px;
+  border-radius: 5px; padding: 2px 8px;
+  font-size: 0.65rem; font-weight: 700;
+}
+
+/* ── ARTICLE CARDS ── */
+.articles-section { padding: 16px 0 56px; }
+.article-list { display: flex; flex-direction: column; gap: 0; margin-top: 28px; }
+
+.article-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); margin-bottom: 16px;
+  box-shadow: var(--shadow); overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.article-card:hover { box-shadow: var(--shadow-lg); }
+
+.article-header {
+  padding: 28px 32px 24px;
+  display: flex; align-items: flex-start; gap: 18px;
+  cursor: pointer;
+}
+.article-icon-wrap {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; flex-shrink: 0; margin-top: 2px;
+}
+.article-meta { flex: 1; }
+.article-eyebrow {
+  font-size: 0.62rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.1em; margin-bottom: 5px;
+}
+.article-title {
+  font-family: var(--serif); font-size: 1.35rem; font-weight: 700;
+  color: var(--ink); letter-spacing: -0.01em; margin-bottom: 7px; line-height: 1.3;
+}
+.article-excerpt { font-size: 0.88rem; color: var(--muted); line-height: 1.6; max-width: 640px; }
+.article-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.tag {
+  border-radius: 5px; padding: 2px 9px;
+  font-size: 0.65rem; font-weight: 700;
+}
+.article-toggle {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--s2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; flex-shrink: 0; align-self: center;
+  cursor: pointer; transition: all 0.2s; color: var(--muted);
+}
+.article-toggle.open { background: var(--teal); color: white; border-color: var(--teal); transform: rotate(180deg); }
+
+/* Article body */
+.article-body { display: none; border-top: 1px solid var(--border); }
+.article-body.open { display: block; }
+
+/* Content sections within article */
+.content-wrap { padding: 32px; }
+
+.guide-section { margin-bottom: 28px; }
+.guide-section:last-child { margin-bottom: 0; }
+
+.guide-h2 {
+  font-family: var(--serif); font-size: 1.1rem; font-weight: 700;
+  color: var(--ink); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.guide-h2::before { content: ''; width: 4px; height: 20px; border-radius: 2px; background: var(--teal); display: block; }
+
+.guide-p { font-size: 0.9rem; color: var(--ink2); line-height: 1.7; margin-bottom: 10px; }
+
+/* Step-by-step */
+.steps-guide { display: flex; flex-direction: column; gap: 10px; margin: 12px 0; }
+.step-guide {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--s2); border-radius: 10px; padding: 12px 14px;
+  border-left: 3px solid var(--teal);
+}
+.step-guide-num {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--teal); color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; font-weight: 800; flex-shrink: 0; margin-top: 1px;
+}
+.step-guide-text { font-size: 0.875rem; color: var(--ink2); line-height: 1.55; }
+.step-guide-text strong { color: var(--ink); }
+
+/* Tips box */
+.tip-box {
+  border-radius: 10px; padding: 14px 16px; margin: 14px 0;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.tip-box-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+.tip-box-text { font-size: 0.85rem; line-height: 1.6; }
+.tip-box-text strong { display: block; margin-bottom: 3px; }
+
+.tip-teal   { background: var(--teal-l);  border: 1px solid var(--teal-m);  color: var(--teal); }
+.tip-coral  { background: var(--coral-l); border: 1px solid var(--coral-m); color: var(--coral); }
+.tip-gold   { background: var(--gold-l);  border: 1px solid var(--gold-m);  color: var(--gold); }
+.tip-violet { background: var(--violet-l);border: 1px solid var(--violet-m);color: var(--violet); }
+
+.tip-box-text { color: var(--ink2); }
+
+/* Who this is for row */
+.audience-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+.audience-chip {
+  background: var(--s2); border: 1px solid var(--border2);
+  border-radius: 20px; padding: 4px 12px;
+  font-size: 0.74rem; font-weight: 600; color: var(--muted);
+  display: flex; align-items: center; gap: 5px;
+}
+
+/* Divider */
+.tool-divider {
+  border: none; border-top: 1px solid var(--border);
+  margin: 28px 0;
+}
+
+/* Tool embed section */
+.tool-embed-section { background: var(--s2); border-top: 1px solid var(--border); padding: 24px 32px; }
+.tool-embed-label {
+  font-size: 0.65rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--muted); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 8px;
+}
+.tool-embed-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.tool-embed-intro { font-size: 0.85rem; color: var(--ink2); margin-bottom: 14px; line-height: 1.6; }
+.tool-embed-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.btn-tool {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 10px 18px; border-radius: 9px;
+  font-family: var(--sans); font-weight: 700; font-size: 0.82rem;
+  cursor: pointer; border: none; transition: all 0.15s; text-decoration: none;
+}
+.btn-teal   { background: var(--teal);   color: white; }
+.btn-teal:hover   { background: #226358; }
+.btn-coral  { background: var(--coral);  color: white; }
+.btn-coral:hover  { background: #b84e2e; }
+.btn-gold   { background: var(--gold);   color: white; }
+.btn-gold:hover   { background: #a8821e; }
+.btn-violet { background: var(--violet); color: white; }
+.btn-violet:hover { background: #5a3d88; }
+.btn-outline {
+  background: white; border: 1.5px solid var(--border2);
+  color: var(--ink2);
+}
+.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+
+/* Iframe embed */
+.tool-iframe-wrap {
+  display: none; margin-top: 16px;
+  border: 1px solid var(--border); border-radius: 12px;
+  overflow: hidden; background: #fff;
+}
+.tool-iframe-wrap.open { display: block; }
+.tool-iframe-wrap iframe { width: 100%; height: 680px; border: none; display: block; }
+.tool-iframe-bar {
+  background: var(--s3); border-bottom: 1px solid var(--border);
+  padding: 8px 14px; display: flex; align-items: center; justify-content: space-between;
+}
+.tool-iframe-bar span { font-size: 0.74rem; color: var(--muted); font-weight: 600; }
+.tool-iframe-close {
+  background: none; border: none; cursor: pointer;
+  color: var(--muted); font-size: 0.8rem; padding: 3px 8px;
+  border-radius: 4px; transition: all 0.15s;
+}
+.tool-iframe-close:hover { background: var(--coral-l); color: var(--coral); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink); color: #b5a898;
+  padding: 40px 24px; margin-top: 56px; text-align: center;
+}
+.footer-inner { max-width: 700px; margin: 0 auto; }
+.footer-logo {
+  font-family: var(--serif); font-size: 1.4rem; font-weight: 700;
+  color: #fefcf8; margin-bottom: 10px;
+}
+.footer-tagline { font-size: 0.85rem; margin-bottom: 20px; line-height: 1.6; }
+.footer-disclaimer {
+  font-size: 0.74rem; color: #7a6e62; line-height: 1.6;
+  border-top: 1px solid #3a3228; padding-top: 16px; margin-top: 16px;
+}
+
+/* ── SCROLL REVEAL ── */
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal { animation: reveal 0.5s ease both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .article-header { padding: 20px; flex-wrap: wrap; }
+  .content-wrap { padding: 20px; }
+  .tool-embed-section { padding: 18px 20px; }
+  .nav-links { display: none; }
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+/* ── VIDEO RESOURCES SECTION ── */
+.videos-section { background: #0f0d0a; padding: 52px 0; margin: 0; }
+.videos-section .section-eyebrow { color: #3da898; }
+.videos-section .section-title { color: #fefcf8; }
+.videos-section .section-sub { color: #8c7f6e; max-width: 600px; }
+.video-topic-group { margin-top: 32px; margin-bottom: 36px; }
+.video-topic-label { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.video-topic-badge { display: inline-flex; align-items: center; gap: 7px; border-radius: 8px; padding: 5px 13px; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+.video-topic-line { flex: 1; height: 1px; background: #2e2a25; }
+.video-cards-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 16px; }
+.video-card { background: #1a1612; border: 1px solid #2e2a25; border-radius: 14px; overflow: hidden; transition: all 0.2s; }
+.video-card:hover { border-color: #4a3f30; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+.video-card.playing { border-color: #ff0000; }
+.video-thumb-wrap { position: relative; padding-bottom: 56.25%; background: #0a0806; overflow: hidden; }
+.video-thumb-wrap iframe { position: absolute; top:0; left:0; width:100%; height:100%; border:none; }
+.video-thumb-placeholder { position: absolute; top:0; left:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#0f0d0a; cursor:pointer; transition:background 0.2s; }
+.video-thumb-placeholder:hover { background: #1a1612; }
+.video-play-btn { width:60px; height:42px; background:#ff0000; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; color:white; transition:transform 0.15s; box-shadow:0 4px 20px rgba(255,0,0,0.35); }
+.video-thumb-placeholder:hover .video-play-btn { transform:scale(1.08); }
+.video-card-info { padding: 14px 16px 16px; }
+.video-card-num { font-size: 0.58rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #4a3f30; margin-bottom: 4px; }
+.video-card-title { font-weight: 700; font-size: 0.88rem; color: #c8beb4; line-height: 1.4; margin-bottom: 6px; }
+.video-card-channel { font-size: 0.72rem; color: #5a5040; display: flex; align-items: center; gap: 5px; }
+.yt-icon { color: #ff0000; }
+.video-load-btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; background: #2a2520; border: 1px solid #3a3028; border-radius: 7px; padding: 6px 12px; font-size: 0.72rem; font-weight: 700; color: #8c7f6e; cursor: pointer; transition: all 0.15s; font-family: var(--sans); }
+.video-load-btn:hover { background: #3a3028; color: #c8beb4; }
+.video-load-btn.loaded { color: #ff0000; border-color: rgba(255,0,0,0.3); background: rgba(255,0,0,0.06); }
+/* ── INLINE ARTICLE VIDEOS ── */
+.article-videos-section { background: #0f0d0a; border-top: 1px solid #1e1a15; padding: 22px 32px; }
+.article-videos-label { font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #4a4038; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.article-videos-label::after { content: ''; flex: 1; height: 1px; background: #1e1a15; }
+.article-video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 14px; }
+.article-video-item { border-radius: 10px; overflow: hidden; background: #1a1612; border: 1px solid #2e2a25; }
+.article-video-caption { padding: 10px 12px; font-size: 0.75rem; font-weight: 600; color: #5a5040; display: flex; align-items: center; gap: 6px; }
+.article-video-load { display: inline-flex; align-items: center; gap: 5px; background: #2a2520; border: 1px solid #3a3028; border-radius: 6px; padding: 5px 10px; font-size: 0.7rem; font-weight: 700; color: #8c7f6e; cursor: pointer; transition: all 0.15s; font-family: var(--sans); margin: 0 12px 12px; }
+.article-video-load:hover { background: #3a3028; color: #c8beb4; }
+.article-video-load.loaded { color: #ff0000; border-color: rgba(255,0,0,0.25); background: rgba(255,0,0,0.05); }
+.video-tag { background: #1a1612; color: #e07a5a; }
+@media (max-width: 640px) { .article-videos-section { padding: 18px 20px; } }
+
+
+/* ═══════════════════════════════════════
+   MONETIZATION STYLES
+═══════════════════════════════════════ */
+
+/* ── AD ZONES ── */
+.ad-zone {
+  background: var(--s2);
+  border: 1.5px dashed var(--border2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--muted2);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 14px;
+  text-align: center;
+  min-height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.ad-zone-label {
+  font-size: 0.55rem;
+  color: var(--muted2);
+  opacity: 0.6;
+  letter-spacing: 0.12em;
+}
+.ad-zone-banner {
+  width: 100%;
+  min-height: 90px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ad-zone-sidebar {
+  min-height: 250px;
+  width: 100%;
+}
+.ad-strip {
+  background: var(--s2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+}
+.ad-strip-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── EMAIL SIGNUP ── */
+.email-section {
+  background: linear-gradient(135deg, #1a3830 0%, #0d2420 100%);
+  padding: 56px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.email-section::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,125,111,0.2), transparent 70%);
+  pointer-events: none;
+}
+.email-section::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: -40px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196,154,42,0.1), transparent 70%);
+  pointer-events: none;
+}
+.email-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.email-eyebrow {
+  display: inline-block;
+  background: rgba(42,125,111,0.25);
+  color: #3da898;
+  border: 1px solid rgba(42,125,111,0.4);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+.email-title {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+  color: #fefcf8;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+.email-title em { font-style: italic; color: #3da898; }
+.email-sub {
+  font-size: 0.9rem;
+  color: #8c7f6e;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+.email-perks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.email-perk {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  color: #b5a898;
+  font-weight: 600;
+}
+.email-perk-icon {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  background: rgba(42,125,111,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.email-form {
+  display: flex;
+  gap: 8px;
+  max-width: 460px;
+  margin: 0 auto 12px;
+  flex-wrap: wrap;
+}
+.email-input {
+  flex: 1;
+  min-width: 200px;
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  color: #fefcf8;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.email-input::placeholder { color: #5a5040; }
+.email-input:focus { border-color: #3da898; }
+.email-submit {
+  background: var(--teal);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.email-submit:hover { background: #226358; transform: translateY(-1px); }
+.email-submit:active { transform: scale(0.97); }
+.email-fine-print {
+  font-size: 0.7rem;
+  color: #4a3f30;
+  margin-top: 4px;
+}
+.email-success {
+  display: none;
+  background: rgba(42,125,111,0.15);
+  border: 1px solid rgba(42,125,111,0.3);
+  border-radius: 10px;
+  padding: 14px 20px;
+  color: #3da898;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-top: 8px;
+}
+.email-success.show { display: block; }
+
+/* ── AFFILIATE SECTION ── */
+.affiliate-section {
+  padding: 56px 0;
+  background: var(--bg);
+}
+.affiliate-intro {
+  max-width: 560px;
+  margin-bottom: 32px;
+}
+.affiliate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+  gap: 14px;
+}
+.affiliate-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: all 0.2s;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.affiliate-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 2px 2px 0 0;
+}
+.affiliate-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border2);
+}
+.aff-cat {
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted2);
+}
+.aff-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.aff-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.aff-name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.aff-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.55;
+  flex: 1;
+}
+.aff-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  width: fit-content;
+}
+.aff-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.78rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+  width: fit-content;
+}
+.aff-disclaimer {
+  font-size: 0.72rem;
+  color: var(--muted2);
+  background: var(--s2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 20px;
+  border-left: 3px solid var(--border2);
+  line-height: 1.5;
+}
+
+/* ── SUPPORT / DONATE ── */
+.support-section {
+  background: linear-gradient(160deg, #fdf8f0 0%, #fefcf8 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 52px 24px;
+}
+.support-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .support-inner { grid-template-columns: 1fr; text-align: center; }
+  .support-actions { justify-content: center; }
+}
+.support-text-col {}
+.support-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+.support-title {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.support-title em { font-style: italic; color: var(--gold); }
+.support-body {
+  font-size: 0.88rem;
+  color: var(--ink2);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.support-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.support-stat {}
+.support-stat-num {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.support-stat-label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.support-card-col {}
+.support-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.support-card-icon { font-size: 2.2rem; margin-bottom: 10px; }
+.support-card-title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.support-card-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+.donate-amounts {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.donate-amt {
+  background: var(--s2);
+  border: 1.5px solid var(--border2);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: var(--ink2);
+}
+.donate-amt:hover, .donate-amt.active {
+  background: var(--gold-l);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.donate-custom-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.donate-custom-input {
+  flex: 1;
+  background: var(--s2);
+  border: 1.5px solid var(--border2);
+  border-radius: 8px;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.donate-custom-input:focus { border-color: var(--gold); }
+.donate-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--gold), #d4a82a);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.donate-btn:hover { background: linear-gradient(135deg, #a8821e, #c49a2a); transform: translateY(-1px); }
+.donate-btn:active { transform: scale(0.98); }
+.donate-platforms {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.donate-platform-btn {
+  background: var(--s2);
+  border: 1px solid var(--border2);
+  border-radius: 7px;
+  padding: 6px 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.donate-platform-btn:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-l); }
+.donate-thanks {
+  display: none;
+  background: var(--gold-l);
+  border: 1px solid var(--gold-m);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-top: 10px;
+  text-align: center;
+}
+.donate-thanks.show { display: block; }
+
+/* ── SIDEBAR AD (inline) ── */
+.content-with-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media (max-width: 860px) {
+  .content-with-sidebar { grid-template-columns: 1fr; }
+  .sidebar-ad-col { display: none; }
+}
+.sidebar-ad-col {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.sidebar-ad-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+.sidebar-ad-card-title {
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: var(--muted2);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <div class="nav-logo-mark">📋</div>
+      <div>
+        <div class="nav-logo-name">ABA Collect the Data</div>
+        <div class="nav-logo-tagline">Free ABA Data Tools, Guides & Videos</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" onclick="scrollTo('overview')">Tools</a>
+      <a class="nav-link" onclick="scrollTo('videos')">Videos</a>
+      <a class="nav-link" onclick="scrollTo('newsletter')">Newsletter</a>
+      <a class="nav-link" onclick="scrollTo('resources')">Resources</a>
+      <a class="nav-link" onclick="scrollTo('support')" style="color:var(--gold);font-weight:800;">☕ Support</a>
+      <a class="nav-link" onclick="scrollTo('frequency')">Frequency</a>
+      <a class="nav-link" onclick="scrollTo('duration')">Duration</a>
+      <a class="nav-link" onclick="scrollTo('interval')">Interval</a>
+      <a class="nav-link" onclick="scrollTo('taskanalysis')">Task Analysis</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ TOP AD BANNER ══════════════════════════════════════ -->
+<div class="ad-strip">
+  <div class="ad-strip-inner">
+    <div class="ad-zone ad-zone-banner">
+      <!-- REPLACE WITH GOOGLE ADSENSE LEADERBOARD (728x90) OR RESPONSIVE AD UNIT -->
+      <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+// ── EMAIL SIGNUP ──────────────────────────────────────────
+function submitEmail() {
+  const input = document.getElementById('emailInput');
+  const val = input.value.trim();
+  if (!val || !val.includes('@')) {
+    input.style.borderColor = '#d95f3b';
+    setTimeout(() => input.style.borderColor = '', 1500);
+    return;
+  }
+  // In production: send to your ESP (Mailchimp, ConvertKit, etc.) via API
+  // Example: fetch('/api/subscribe', { method:'POST', body: JSON.stringify({ email: val }) })
+  document.getElementById('emailForm').style.display = 'none';
+  document.getElementById('emailSuccess').classList.add('show');
+}
+
+// ── DONATE ─────────────────────────────────────────────────
+let donateSelected = '3';
+function setDonate(btn, amount) {
+  donateSelected = amount;
+  document.querySelectorAll('.donate-amt').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('donateCustom').value = '';
+}
+function clearDonateSelection() {
+  document.querySelectorAll('.donate-amt').forEach(b => b.classList.remove('active'));
+  donateSelected = null;
+}
+function handleDonate() {
+  const custom = document.getElementById('donateCustom').value;
+  const amount = custom || donateSelected || '5';
+  // In production: redirect to Buy Me a Coffee, Ko-fi, Stripe, or PayPal with amount
+  // Example: window.open('https://buymeacoffee.com/yourusername?amount=' + amount, '_blank');
+  document.getElementById('donateThanks').classList.add('show');
+  setTimeout(() => document.getElementById('donateThanks').classList.remove('show'), 4000);
+}
+
+</script>
+           <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins>
+           <script>(adsbygoogle = window.adsbygoogle || []).push({});
+// ── EMAIL SIGNUP ──────────────────────────────────────────
+function submitEmail() {
+  const input = document.getElementById('emailInput');
+  const val = input.value.trim();
+  if (!val || !val.includes('@')) {
+    input.style.borderColor = '#d95f3b';
+    setTimeout(() => input.style.borderColor = '', 1500);
+    return;
+  }
+  // In production: send to your ESP (Mailchimp, ConvertKit, etc.) via API
+  // Example: fetch('/api/subscribe', { method:'POST', body: JSON.stringify({ email: val }) })
+  document.getElementById('emailForm').style.display = 'none';
+  document.getElementById('emailSuccess').classList.add('show');
+}
+
+// ── DONATE ─────────────────────────────────────────────────
+let donateSelected = '3';
+function setDonate(btn, amount) {
+  donateSelected = amount;
+  document.querySelectorAll('.donate-amt').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('donateCustom').value = '';
+}
+function clearDonateSelection() {
+  document.querySelectorAll('.donate-amt').forEach(b => b.classList.remove('active'));
+  donateSelected = null;
+}
+function handleDonate() {
+  const custom = document.getElementById('donateCustom').value;
+  const amount = custom || donateSelected || '5';
+  // In production: redirect to Buy Me a Coffee, Ko-fi, Stripe, or PayPal with amount
+  // Example: window.open('https://buymeacoffee.com/yourusername?amount=' + amount, '_blank');
+  document.getElementById('donateThanks').classList.add('show');
+  setTimeout(() => document.getElementById('donateThanks').classList.remove('show'), 4000);
+}
+
+</script> -->
+      <div>
+        <div style="font-size:1.1rem;margin-bottom:4px;">📢</div>
+        <div style="font-weight:700;font-size:0.78rem;color:var(--muted);">Advertisement</div>
+        <div class="ad-zone-label">Leaderboard 728×90 — Replace with Google AdSense unit</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-eyebrow">Free ABA Resources</div>
+  <h1>Data collection, <em>made simple</em> for everyone</h1>
+  <p class="hero-sub">Practical guides, video tutorials, and ready-to-use digital tools for RBTs, BCBAs, parents, and caregivers — no jargon, just clear steps and the tools to get started today.</p>
+  <div class="hero-pills">
+    <a class="hero-pill" onclick="scrollTo('videos')">▶ Video Tutorials</a>
+    <a class="hero-pill" onclick="scrollTo('frequency')">📊 Frequency Recording</a>
+    <a class="hero-pill" onclick="scrollTo('duration')">⏱ Duration Recording</a>
+    <a class="hero-pill" onclick="scrollTo('interval')">▦ Interval Recording</a>
+    <a class="hero-pill" onclick="scrollTo('taskanalysis')">📋 Task Analysis</a>
+  </div>
+</section>
+
+<!-- ══ OVERVIEW CARDS ════════════════════════════════════ -->
+<section class="overview-section" id="overview">
+  <div class="page">
+    <div class="section-eyebrow">Your Toolkit</div>
+    <div class="section-title">4 Essential Data Collection Methods</div>
+    <p class="section-sub">Each method captures a different dimension of behavior. Click any card to jump to the full guide.</p>
+    <div class="overview-grid">
+
+      <a class="overview-card reveal" onclick="openArticle('frequency'); scrollTo('frequency')">
+        <div class="ov-icon" style="background:var(--teal-l);">📊</div>
+        <div class="ov-num" style="color:var(--teal);">Method 01</div>
+        <div class="ov-name">Frequency Recording</div>
+        <div class="ov-desc">Count how many times a behavior occurs. Best for behaviors with a clear start and end.</div>
+        <div class="ov-tag" style="background:var(--teal-l);color:var(--teal);">Great for beginners · 2 videos</div>
+      </a>
+
+      <a class="overview-card reveal delay-1" onclick="openArticle('duration'); scrollTo('duration')">
+        <div class="ov-icon" style="background:var(--coral-l);">⏱</div>
+        <div class="ov-num" style="color:var(--coral);">Method 02</div>
+        <div class="ov-name">Duration Recording</div>
+        <div class="ov-desc">Measure how long a behavior lasts. Ideal for behaviors that vary in length like tantrums or engagement.</div>
+        <div class="ov-tag" style="background:var(--coral-l);color:var(--coral);">Time-based · 2 videos</div>
+      </a>
+
+      <a class="overview-card reveal delay-2" onclick="openArticle('interval'); scrollTo('interval')">
+        <div class="ov-icon" style="background:var(--gold-l);">▦</div>
+        <div class="ov-num" style="color:var(--gold);">Method 03</div>
+        <div class="ov-name">Interval Recording</div>
+        <div class="ov-desc">Divide sessions into time blocks and note whether behavior occurred. Efficient for busy therapists.</div>
+        <div class="ov-tag" style="background:var(--gold-l);color:var(--gold);">Efficient & flexible</div>
+      </a>
+
+      <a class="overview-card reveal delay-3" onclick="openArticle('taskanalysis'); scrollTo('taskanalysis')">
+        <div class="ov-icon" style="background:var(--violet-l);">📋</div>
+        <div class="ov-num" style="color:var(--violet);">Method 04</div>
+        <div class="ov-name">Task Analysis & Chaining</div>
+        <div class="ov-desc">Break multi-step skills into individual steps and track prompts needed at each one.</div>
+        <div class="ov-tag" style="background:var(--violet-l);color:var(--violet);">Skill building · 1 video</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ VIDEO RESOURCES ════════════════════════════════════ -->
+<section class="videos-section" id="videos">
+  <div class="page" style="padding-top:0;padding-bottom:0;">
+    <div class="section-eyebrow">▶ Video Library</div>
+    <div class="section-title">Learn by watching</div>
+    <p class="section-sub">7 curated videos demonstrating each recording method in classroom and therapy settings. Click any card to load and play directly.</p>
+
+    <!-- FREQUENCY -->
+    <div class="video-topic-group">
+      <div class="video-topic-label">
+        <div class="video-topic-badge" style="background:rgba(42,125,111,0.15);color:#3da898;border:1px solid rgba(42,125,111,0.3);">📊 Frequency Recording</div>
+        <div class="video-topic-line"></div>
+      </div>
+      <div class="video-cards-row">
+        <div class="video-card" id="vc-f1">
+          <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadVid('vc-f1','hqQPw1f60tw')"><div class="video-play-btn">▶</div></div></div>
+          <div class="video-card-info">
+            <div class="video-card-num">Frequency · Video 1 of 2</div>
+            <div class="video-card-title">Frequency & Event Recording Tutorial</div>
+            <div class="video-card-channel"><span class="yt-icon">▶</span> YouTube</div>
+            <button class="video-load-btn" id="btn-vc-f1" onclick="loadVid('vc-f1','hqQPw1f60tw')">▶ Load & Play</button>
+          </div>
+        </div>
+        <div class="video-card" id="vc-f2">
+          <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadVid('vc-f2','IcG2ihLNRAg')"><div class="video-play-btn">▶</div></div></div>
+          <div class="video-card-info">
+            <div class="video-card-num">Frequency · Video 2 of 2</div>
+            <div class="video-card-title">Event Recording in ABA — Classroom Demo</div>
+            <div class="video-card-channel"><span class="yt-icon">▶</span> YouTube</div>
+            <button class="video-load-btn" id="btn-vc-f2" onclick="loadVid('vc-f2','IcG2ihLNRAg')">▶ Load & Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DURATION -->
+    <div class="video-topic-group">
+      <div class="video-topic-label">
+        <div class="video-topic-badge" style="background:rgba(217,95,59,0.12);color:#e07a5a;border:1px solid rgba(217,95,59,0.3);">⏱ Duration Recording</div>
+        <div class="video-topic-line"></div>
+      </div>
+      <div class="video-cards-row">
+        <div class="video-card" id="vc-d1">
+          <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadVid('vc-d1','KmhINqOps94')"><div class="video-play-btn">▶</div></div></div>
+          <div class="video-card-info">
+            <div class="video-card-num">Duration · Video 1 of 2</div>
+            <div class="video-card-title">Duration Recording — How to Measure Behavior Length</div>
+            <div class="video-card-channel"><span class="yt-icon">▶</span> YouTube</div>
+            <button class="video-load-btn" id="btn-vc-d1" onclick="loadVid('vc-d1','KmhINqOps94')">▶ Load & Play</button>
+          </div>
+        </div>
+        <div class="video-card" id="vc-d2">
+          <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadVid('vc-d2','U9-qjl83lLY')"><div class="video-play-btn">▶</div></div></div>
+          <div class="video-card-info">
+            <div class="video-card-num">Duration · Video 2 of 2</div>
+            <div class="video-card-title">Duration Data Collection — Classroom Setting</div>
+            <div class="video-card-channel"><span class="yt-icon">▶</span> YouTube</div>
+            <button class="video-load-btn" id="btn-vc-d2" onclick="loadVid('vc-d2','U9-qjl83lLY')">▶ Load & Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERVAL -->
+    <div class="video-topic-group">
+      <div class="video-topic-label">
+        <div class="video-topic-badge" style="background:rgba(196,154,42,0.12);color:#d4a82a;border:1px solid rgba(196,154,42,0.3);">▦ Interval Recording</div>
+        <div class="video-topic-line"></div>
+      </div>
+      <div class="video-cards-row">
+        <div class="video-card" id="vc-i1">
+          <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadVid('vc-i1','3yTG8ZXk-us')"><div class="video-play-btn">▶</div></div></div>
+          <div class="video-card-info">
+            <div class="video-card-num">Interval · Video 1 of 2</div>
+            <div class="video-card-title">Partial & Whole Interval Recording — ABA Guide</div>
+            <div class="video-card-channel"><span class="yt-icon">▶</span> YouTube</div>
+            <button class="video-load-btn" id="btn-vc-i1" onclick="loadVid('vc-i1','3yTG8ZXk-us')">▶ Load & Play</button>
+          </div>
+        </div>
+        <div class="video-card" id="vc-i2">
+          <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadVid('vc-i2','RtIERVYkYwc')"><div class="video-play-btn">▶</div></div></div>
+          <div class="video-card-info">
+            <div class="video-card-num">Interval · Video 2 of 2</div>
+            <div class="video-card-title">Interval Recording in the Classroom</div>
+            <div class="video-card-channel"><span class="yt-icon">▶</span> YouTube</div>
+            <button class="video-load-btn" id="btn-vc-i2" onclick="loadVid('vc-i2','RtIERVYkYwc')">▶ Load & Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TASK ANALYSIS -->
+    <div class="video-topic-group">
+      <div class="video-topic-label">
+        <div class="video-topic-badge" style="background:rgba(107,79,160,0.12);color:#9b7fd4;border:1px solid rgba(107,79,160,0.3);">📋 Task Analysis & Chaining</div>
+        <div class="video-topic-line"></div>
+      </div>
+      <div class="video-cards-row">
+        <div class="video-card" id="vc-t1">
+          <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadVid('vc-t1','mIAJ8SKLkGY',14)"><div class="video-play-btn">▶</div></div></div>
+          <div class="video-card-info">
+            <div class="video-card-num">Task Analysis · Video 1 of 1</div>
+            <div class="video-card-title">Task Analysis & Chaining — Step-by-Step ABA Guide</div>
+            <div class="video-card-channel"><span class="yt-icon">▶</span> YouTube</div>
+            <button class="video-load-btn" id="btn-vc-t1" onclick="loadVid('vc-t1','mIAJ8SKLkGY',14)">▶ Load & Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ EMAIL SIGNUP ══════════════════════════════════════ -->
+<section class="email-section" id="newsletter">
+  <div class="email-inner">
+    <div class="email-eyebrow">📬 Free Newsletter</div>
+    <h2 class="email-title">Get new tools &amp; guides<br><em>delivered to your inbox</em></h2>
+    <p class="email-sub">Join therapists, educators, and parents who receive our free monthly roundup — new data tools, classroom strategies, and ABA resources straight to your inbox. No spam, ever.</p>
+    <div class="email-perks">
+      <div class="email-perk"><div class="email-perk-icon">🛠</div>New tools first</div>
+      <div class="email-perk"><div class="email-perk-icon">📄</div>Free resource downloads</div>
+      <div class="email-perk"><div class="email-perk-icon">🎓</div>ABA tips & strategies</div>
+      <div class="email-perk"><div class="email-perk-icon">🔔</div>No spam, unsubscribe anytime</div>
+    </div>
+    <div class="email-form" id="emailForm">
+      <input type="email" class="email-input" id="emailInput" placeholder="your@email.com" onkeydown="if(event.key==='Enter')submitEmail()">
+      <button class="email-submit" onclick="submitEmail()">Subscribe Free →</button>
+    </div>
+    <div class="email-fine-print">🔒 Your email is safe with us. We never sell or share it.</div>
+    <div class="email-success" id="emailSuccess">
+      🎉 You're in! Check your inbox for a welcome message and your first free resource.
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ ARTICLES ══════════════════════════════════════════ -->
+<section class="articles-section" id="articles">
+  <div class="page">
+    <div class="section-eyebrow">Guides & Tools</div>
+    <div class="section-title">Learn, then practice</div>
+    <p class="section-sub">Each guide explains the method in plain language, includes embedded video tutorials, then gives you the interactive tool and printable sheet to use right away.</p>
+
+    <div class="article-list" style="margin-top:28px;">
+
+      <!-- ── ARTICLE 1: FREQUENCY ── -->
+      <div class="article-card reveal" id="frequency">
+        <div class="article-header" onclick="toggleArticle('frequency')">
+          <div class="article-icon-wrap" style="background:var(--teal-l);">📊</div>
+          <div class="article-meta">
+            <div class="article-eyebrow" style="color:var(--teal);">Method 01 · Frequency & Event Recording</div>
+            <div class="article-title">How to Count Behaviors: A Beginner's Guide to Frequency Recording</div>
+            <div class="article-excerpt">The simplest and most common form of ABA data collection. If you can count on your fingers, you already understand the concept. Here's everything you need to get started.</div>
+            <div class="article-tags">
+              <span class="tag" style="background:var(--teal-l);color:var(--teal);">RBTs</span>
+              <span class="tag" style="background:var(--teal-l);color:var(--teal);">BCBAs</span>
+              <span class="tag" style="background:var(--teal-l);color:var(--teal);">Parents</span>
+              <span class="tag" style="background:var(--s2);color:var(--muted);">Beginner-friendly</span>
+              <span class="tag" style="background:#1a1612;color:#e07a5a;">▶ 2 Videos</span>
+            </div>
+          </div>
+          <div class="article-toggle" id="toggle-frequency">▼</div>
+        </div>
+        <div class="article-body" id="body-frequency">
+          <div class="content-wrap">
+
+            <div class="guide-section">
+              <div class="guide-h2">What is Frequency Recording?</div>
+              <p class="guide-p">Frequency recording (also called event recording) is simply <strong>counting how many times a behavior happens</strong> during an observation period. Every time the target behavior occurs, you mark it down — a tally mark, a tap on a counter app, or a click on a wrist counter.</p>
+              <p class="guide-p">At the end of the session, you have a number: the total count. You can also calculate a <strong>rate</strong> by dividing the count by the number of minutes observed, which makes it easier to compare sessions of different lengths.</p>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">When should you use it?</div>
+              <div class="tip-box tip-teal">
+                <div class="tip-box-icon">✅</div>
+                <div class="tip-box-text"><strong>Best used when the behavior has a clear beginning and end</strong> — like hitting, calling out, requesting an item, saying a word, or throwing an object. If you can clearly tell when the behavior started and stopped, frequency recording is a great fit.</div>
+              </div>
+              <div class="tip-box tip-coral">
+                <div class="tip-box-icon">⚠️</div>
+                <div class="tip-box-text"><strong>Not ideal for behaviors that last a long time</strong> — like a 20-minute tantrum or extended stereotypy. For those, Duration Recording is a better choice.</div>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Who uses this?</div>
+              <div class="audience-row">
+                <span class="audience-chip">🧑‍⚕️ RBTs tracking problem behaviors</span>
+                <span class="audience-chip">👩‍💼 BCBAs monitoring treatment progress</span>
+                <span class="audience-chip">👨‍👩‍👧 Parents at home counting requests or outbursts</span>
+                <span class="audience-chip">🏫 Teachers in the classroom</span>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Step-by-step: How to collect frequency data</div>
+              <div class="steps-guide">
+                <div class="step-guide"><div class="step-guide-num">1</div><div class="step-guide-text"><strong>Define the behavior clearly</strong> — write a precise, observable definition. Instead of "aggression," write "any instance of hitting another person with an open or closed hand."</div></div>
+                <div class="step-guide"><div class="step-guide-num">2</div><div class="step-guide-text"><strong>Set your observation period</strong> — decide when you'll start and stop collecting (e.g., during the 30-minute session, or during dinner time at home).</div></div>
+                <div class="step-guide"><div class="step-guide-num">3</div><div class="step-guide-text"><strong>Every time the behavior occurs, record it</strong> — tap the counter, make a tally mark, or press the button in the digital tool below.</div></div>
+                <div class="step-guide"><div class="step-guide-num">4</div><div class="step-guide-text"><strong>At the end, count the total</strong> and optionally divide by session minutes to get a rate per minute.</div></div>
+                <div class="step-guide"><div class="step-guide-num">5</div><div class="step-guide-text"><strong>Record your session info</strong> (client name, date, therapist) so data can be tracked over time and shared with your team or BCBA.</div></div>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Tips for accuracy</div>
+              <div class="tip-box tip-gold">
+                <div class="tip-box-icon">💡</div>
+                <div class="tip-box-text"><strong>Only count complete instances.</strong> If the behavior starts but you're unsure if it meets your definition, don't count it — consistency is more important than capturing every borderline case.</div>
+              </div>
+              <div class="tip-box tip-teal">
+                <div class="tip-box-icon">📌</div>
+                <div class="tip-box-text"><strong>Use the undo button.</strong> Accidental taps happen. The digital tool below has an undo function so you don't have to restart your session over a miscount.</div>
+              </div>
+            </div>
+
+            <hr class="tool-divider">
+            <div class="guide-section">
+              <div class="guide-h2">Common behaviors tracked with frequency recording</div>
+              <p class="guide-p">Hitting, kicking, biting, vocal outbursts, elopement attempts, self-injurious behavior (SIB), unprompted requests (mands), eye contact initiations, appropriate greetings, and on-task behavior.</p>
+            </div>
+
+          </div>
+
+
+          <div class="article-videos-section">
+            <div class="article-videos-label">▶ Video Tutorials — Frequency Recording</div>
+            <div class="article-video-grid">
+              <div class="article-video-item" id="av-f1">
+                <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadAV('av-f1','hqQPw1f60tw')"><div class="video-play-btn">▶</div></div></div>
+                <div class="article-video-caption"><span class="yt-icon">▶</span> Frequency & Event Recording Tutorial</div>
+                <button class="article-video-load" id="btn-av-f1" onclick="loadAV('av-f1','hqQPw1f60tw')">▶ Load Video</button>
+              </div>
+              <div class="article-video-item" id="av-f2">
+                <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadAV('av-f2','IcG2ihLNRAg')"><div class="video-play-btn">▶</div></div></div>
+                <div class="article-video-caption"><span class="yt-icon">▶</span> Event Recording — Classroom Demo</div>
+                <button class="article-video-load" id="btn-av-f2" onclick="loadAV('av-f2','IcG2ihLNRAg')">▶ Load Video</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool-embed-section">
+            <div class="tool-embed-label">Interactive Tool & Printable Sheet</div>
+            <p class="tool-embed-intro">Use the digital tool directly in your browser — it works on phones and tablets. Or download the printable PDF data sheet to use during sessions with paper and pen.</p>
+            <div class="tool-embed-btns">
+              <button class="btn-tool btn-teal" onclick="toggleTool('frequency')">📊 Open Digital Tool</button>
+              <a class="btn-tool btn-outline" href="ABA_Frequency_Recording_Sheet.pdf" download>⬇ Download PDF Sheet</a>
+            </div>
+            <div class="tool-iframe-wrap" id="tool-frequency">
+              <div class="tool-iframe-bar">
+                <span>📊 Frequency & Event Recording Tool</span>
+                <button class="tool-iframe-close" onclick="toggleTool('frequency')">✕ Close</button>
+              </div>
+              <iframe src="aba_frequency_tracker.html" title="Frequency Recording Tool"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── ARTICLE 2: DURATION ── -->
+      <div class="article-card reveal delay-1" id="duration">
+        <div class="article-header" onclick="toggleArticle('duration')">
+          <div class="article-icon-wrap" style="background:var(--coral-l);">⏱</div>
+          <div class="article-meta">
+            <div class="article-eyebrow" style="color:var(--coral);">Method 02 · Duration Recording</div>
+            <div class="article-title">How Long Did It Last? A Guide to Duration Recording</div>
+            <div class="article-excerpt">When the number of times something happens matters less than how long it goes on, duration recording is your tool. Learn how to time behaviors accurately and what the data tells you.</div>
+            <div class="article-tags">
+              <span class="tag" style="background:var(--coral-l);color:var(--coral);">RBTs</span>
+              <span class="tag" style="background:var(--coral-l);color:var(--coral);">BCBAs</span>
+              <span class="tag" style="background:var(--coral-l);color:var(--coral);">Parents</span>
+              <span class="tag" style="background:var(--s2);color:var(--muted);">Time-based</span>
+              <span class="tag" style="background:#1a1612;color:#e07a5a;">▶ 2 Videos</span>
+            </div>
+          </div>
+          <div class="article-toggle" id="toggle-duration">▼</div>
+        </div>
+        <div class="article-body" id="body-duration">
+          <div class="content-wrap">
+
+            <div class="guide-section">
+              <div class="guide-h2">What is Duration Recording?</div>
+              <p class="guide-p">Duration recording measures <strong>how long a behavior lasts</strong> from the moment it starts to the moment it ends. You start a stopwatch when the behavior begins and stop it when it ends. Each occurrence is called an <em>episode</em>.</p>
+              <p class="guide-p">At the end of a session you can calculate: <strong>total duration</strong> (all episodes added together), <strong>mean duration</strong> (average episode length), and <strong>percentage of session time</strong> the behavior occupied.</p>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">When should you use it?</div>
+              <div class="tip-box tip-coral">
+                <div class="tip-box-icon">✅</div>
+                <div class="tip-box-text"><strong>Best for behaviors that vary in length</strong> — tantrums, crying episodes, time spent on-task, engagement with an activity, stereotypy that runs continuously, or elopement. The question you're trying to answer is "how long," not just "how often."</div>
+              </div>
+              <div class="tip-box tip-gold">
+                <div class="tip-box-icon">⚠️</div>
+                <div class="tip-box-text"><strong>Harder to use when behaviors are very brief or frequent</strong> — like rapid vocal tics or quick taps. For those, frequency recording is easier to manage in real time.</div>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Who uses this?</div>
+              <div class="audience-row">
+                <span class="audience-chip">🧑‍⚕️ RBTs timing tantrum episodes</span>
+                <span class="audience-chip">👩‍💼 BCBAs analyzing engagement time</span>
+                <span class="audience-chip">👨‍👩‍👧 Parents tracking meltdown length at home</span>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Step-by-step: How to collect duration data</div>
+              <div class="steps-guide">
+                <div class="step-guide"><div class="step-guide-num">1</div><div class="step-guide-text"><strong>Define the behavior's start and stop rules</strong> — e.g., "tantrum begins when the child falls to the floor or begins crying loudly; ends when child is calm and upright for 10 consecutive seconds."</div></div>
+                <div class="step-guide"><div class="step-guide-num">2</div><div class="step-guide-text"><strong>When the behavior begins, start your timer.</strong> In the digital tool, press the large "▶ Start" button on the behavior card.</div></div>
+                <div class="step-guide"><div class="step-guide-num">3</div><div class="step-guide-text"><strong>When the behavior ends, press Stop.</strong> The episode is saved automatically with its start time and duration.</div></div>
+                <div class="step-guide"><div class="step-guide-num">4</div><div class="step-guide-text"><strong>Repeat for each episode.</strong> Multiple episodes can be tracked for the same behavior across a session.</div></div>
+                <div class="step-guide"><div class="step-guide-num">5</div><div class="step-guide-text"><strong>Review the summary tab</strong> at the end to see total duration, mean duration, and percentage of session time per behavior.</div></div>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Understanding your data</div>
+              <div class="tip-box tip-teal">
+                <div class="tip-box-icon">📈</div>
+                <div class="tip-box-text"><strong>Mean duration going down is a good sign.</strong> If tantrums were averaging 12 minutes and are now averaging 5 minutes, that's meaningful progress — even if the number of tantrums stayed the same.</div>
+              </div>
+              <div class="tip-box tip-violet">
+                <div class="tip-box-icon">📊</div>
+                <div class="tip-box-text"><strong>Percentage of session time</strong> is one of the most useful metrics for behaviors like on-task engagement. A goal of "80% of session time on-task" is specific, measurable, and easy to track with this method.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="article-videos-section">
+            <div class="article-videos-label">▶ Video Tutorials — Duration Recording</div>
+            <div class="article-video-grid">
+              <div class="article-video-item" id="av-d1">
+                <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadAV('av-d1','KmhINqOps94')"><div class="video-play-btn">▶</div></div></div>
+                <div class="article-video-caption"><span class="yt-icon">▶</span> Duration Recording — Measure Behavior Length</div>
+                <button class="article-video-load" id="btn-av-d1" onclick="loadAV('av-d1','KmhINqOps94')">▶ Load Video</button>
+              </div>
+              <div class="article-video-item" id="av-d2">
+                <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadAV('av-d2','U9-qjl83lLY')"><div class="video-play-btn">▶</div></div></div>
+                <div class="article-video-caption"><span class="yt-icon">▶</span> Duration Data Collection — Classroom Setting</div>
+                <button class="article-video-load" id="btn-av-d2" onclick="loadAV('av-d2','U9-qjl83lLY')">▶ Load Video</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool-embed-section">
+            <div class="tool-embed-label">Interactive Tool & Printable Sheet</div>
+            <p class="tool-embed-intro">Tap Start when the behavior begins, Stop when it ends. Each episode is timestamped automatically. Use the summary tab to review mean duration and session percentages.</p>
+            <div class="tool-embed-btns">
+              <button class="btn-tool btn-coral" onclick="toggleTool('duration')">⏱ Open Digital Tool</button>
+              <a class="btn-tool btn-outline" href="ABA_Duration_Recording_Sheet.pdf" download>⬇ Download PDF Sheet</a>
+            </div>
+            <div class="tool-iframe-wrap" id="tool-duration">
+              <div class="tool-iframe-bar">
+                <span>⏱ Duration Recording Tool</span>
+                <button class="tool-iframe-close" onclick="toggleTool('duration')">✕ Close</button>
+              </div>
+              <iframe src="aba_duration_tracker.html" title="Duration Recording Tool"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── ARTICLE 3: INTERVAL ── -->
+      <div class="article-card reveal delay-2" id="interval">
+        <div class="article-header" onclick="toggleArticle('interval')">
+          <div class="article-icon-wrap" style="background:var(--gold-l);">▦</div>
+          <div class="article-meta">
+            <div class="article-eyebrow" style="color:var(--gold);">Method 03 · Interval Recording</div>
+            <div class="article-title">Partial vs. Whole Interval: Understanding Interval Recording</div>
+            <div class="article-excerpt">Interval recording lets you watch multiple behaviors at once without needing to count every single occurrence. It's the go-to method when you need efficiency without sacrificing meaningful data.</div>
+            <div class="article-tags">
+              <span class="tag" style="background:var(--gold-l);color:var(--gold);">RBTs</span>
+              <span class="tag" style="background:var(--gold-l);color:var(--gold);">BCBAs</span>
+              <span class="tag" style="background:var(--s2);color:var(--muted);">Intermediate</span>
+              <span class="tag" style="background:var(--s2);color:var(--muted);">Multi-behavior</span>
+              <span class="tag" style="background:#1a1612;color:#e07a5a;">▶ 2 Videos</span>
+            </div>
+          </div>
+          <div class="article-toggle" id="toggle-interval">▼</div>
+        </div>
+        <div class="article-body" id="body-interval">
+          <div class="content-wrap">
+
+            <div class="guide-section">
+              <div class="guide-h2">What is Interval Recording?</div>
+              <p class="guide-p">Instead of counting every occurrence or timing every episode, interval recording <strong>divides your observation period into equal time blocks</strong> (intervals) — typically 10, 15, or 30 seconds long. At the end of each interval, you simply note: <em>did the behavior occur or not?</em></p>
+              <p class="guide-p">This gives you an <strong>estimated percentage of intervals</strong> during which the behavior was observed — a very practical measure that's much easier to collect when you're also delivering instruction.</p>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Partial vs. Whole Interval — what's the difference?</div>
+              <div class="tip-box tip-gold">
+                <div class="tip-box-icon">📌</div>
+                <div class="tip-box-text"><strong>Partial Interval:</strong> Mark "Yes" if the behavior occurred at <em>any point</em> during the interval — even just for a second. This tends to <em>overestimate</em> how much the behavior is happening. Best for behaviors you want to <em>increase</em> (like appropriate requests) so you don't miss any occurrences.</div>
+              </div>
+              <div class="tip-box tip-coral">
+                <div class="tip-box-icon">📌</div>
+                <div class="tip-box-text"><strong>Whole Interval:</strong> Mark "Yes" only if the behavior lasted <em>the entire interval</em> without stopping. This tends to <em>underestimate</em> behavior. Best for behaviors you want to <em>increase</em> in duration (like sustained on-task behavior or play engagement).</div>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">When should you use it?</div>
+              <div class="audience-row">
+                <span class="audience-chip">📍 Behaviors that are hard to count discretely</span>
+                <span class="audience-chip">📍 When you need to track multiple behaviors at once</span>
+                <span class="audience-chip">📍 When you're also delivering instruction during the session</span>
+                <span class="audience-chip">📍 Classroom and group settings</span>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Step-by-step: How to collect interval data</div>
+              <div class="steps-guide">
+                <div class="step-guide"><div class="step-guide-num">1</div><div class="step-guide-text"><strong>Set your interval length</strong> — 10 seconds is common for fast-moving sessions; 30 seconds works well for calmer environments. The tool lets you choose anything from 5–300 seconds.</div></div>
+                <div class="step-guide"><div class="step-guide-num">2</div><div class="step-guide-text"><strong>Set your session length</strong> — this determines how many total intervals you'll have. A 10-minute session with 10-second intervals = 60 intervals.</div></div>
+                <div class="step-guide"><div class="step-guide-num">3</div><div class="step-guide-text"><strong>Choose Partial or Whole interval</strong> — or select "Both" to track the same behavior with both methods side-by-side for comparison.</div></div>
+                <div class="step-guide"><div class="step-guide-num">4</div><div class="step-guide-text"><strong>Press Start and observe.</strong> The countdown timer tells you when each interval ends. Mark Yes or No for each behavior before the next interval begins.</div></div>
+                <div class="step-guide"><div class="step-guide-num">5</div><div class="step-guide-text"><strong>At the end, review % occurrence</strong> — the number of "Yes" intervals divided by total intervals gives you your percentage score for that session.</div></div>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Important note for parents & caregivers</div>
+              <div class="tip-box tip-teal">
+                <div class="tip-box-icon">💡</div>
+                <div class="tip-box-text"><strong>Interval recording is best done with some practice first.</strong> If you're new to it, try a 30-second interval length while tracking just one behavior before adding more. The digital tool's audio cues (the countdown turning red) help you stay on pace.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="article-videos-section">
+            <div class="article-videos-label">▶ Video Tutorials — Interval Recording</div>
+            <div class="article-video-grid">
+              <div class="article-video-item" id="av-i1">
+                <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadAV('av-i1','3yTG8ZXk-us')"><div class="video-play-btn">▶</div></div></div>
+                <div class="article-video-caption"><span class="yt-icon">▶</span> Partial & Whole Interval Recording Guide</div>
+                <button class="article-video-load" id="btn-av-i1" onclick="loadAV('av-i1','3yTG8ZXk-us')">▶ Load Video</button>
+              </div>
+              <div class="article-video-item" id="av-i2">
+                <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadAV('av-i2','RtIERVYkYwc')"><div class="video-play-btn">▶</div></div></div>
+                <div class="article-video-caption"><span class="yt-icon">▶</span> Interval Recording in the Classroom</div>
+                <button class="article-video-load" id="btn-av-i2" onclick="loadAV('av-i2','RtIERVYkYwc')">▶ Load Video</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool-embed-section">
+            <div class="tool-embed-label">Interactive Tool & Printable Sheet</div>
+            <p class="tool-embed-intro">Configure your interval length, session length, and recording method in the Setup tab, then press Begin Recording. The countdown timer and color-coded interval grid guide you through the session.</p>
+            <div class="tool-embed-btns">
+              <button class="btn-tool btn-gold" onclick="toggleTool('interval')">▦ Open Digital Tool</button>
+              <a class="btn-tool btn-outline" href="ABA_Interval_Recording_Sheet.pdf" download>⬇ Download PDF Sheet</a>
+            </div>
+            <div class="tool-iframe-wrap" id="tool-interval">
+              <div class="tool-iframe-bar">
+                <span>▦ Interval Recording Tool</span>
+                <button class="tool-iframe-close" onclick="toggleTool('interval')">✕ Close</button>
+              </div>
+              <iframe src="aba_interval_tracker.html" title="Interval Recording Tool"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── ARTICLE 4: TASK ANALYSIS ── -->
+      <div class="article-card reveal delay-3" id="taskanalysis">
+        <div class="article-header" onclick="toggleArticle('taskanalysis')">
+          <div class="article-icon-wrap" style="background:var(--violet-l);">📋</div>
+          <div class="article-meta">
+            <div class="article-eyebrow" style="color:var(--violet);">Method 04 · Task Analysis & Chaining</div>
+            <div class="article-title">Teaching Step by Step: Task Analysis, Chaining & Prompt Tracking</div>
+            <div class="article-excerpt">When the goal is teaching a multi-step skill — like hand washing, getting dressed, or making a snack — task analysis breaks it into manageable pieces and tracks exactly how much help is needed at each step.</div>
+            <div class="article-tags">
+              <span class="tag" style="background:var(--violet-l);color:var(--violet);">RBTs</span>
+              <span class="tag" style="background:var(--violet-l);color:var(--violet);">BCBAs</span>
+              <span class="tag" style="background:var(--violet-l);color:var(--violet);">Parents</span>
+              <span class="tag" style="background:var(--s2);color:var(--muted);">Skill building</span>
+              <span class="tag" style="background:#1a1612;color:#e07a5a;">▶ 1 Video</span>
+            </div>
+          </div>
+          <div class="article-toggle" id="toggle-taskanalysis">▼</div>
+        </div>
+        <div class="article-body" id="body-taskanalysis">
+          <div class="content-wrap">
+
+            <div class="guide-section">
+              <div class="guide-h2">What is Task Analysis?</div>
+              <p class="guide-p">Task analysis means <strong>breaking a complex skill down into its individual steps</strong>. Instead of recording "washed hands: yes or no," you record each component separately — turning on the water, applying soap, scrubbing, rinsing, drying — and note how much help was needed for each one.</p>
+              <p class="guide-p">This gives your team a precise picture of which parts of a skill have been mastered and which still need work.</p>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">The three chaining methods — which one to use?</div>
+              <div class="tip-box tip-teal">
+                <div class="tip-box-icon">➡️</div>
+                <div class="tip-box-text"><strong>Forward Chaining:</strong> Teach the first step to independence before moving on. Best when step 1 is the most natural starting point and the learner will benefit from early wins at the beginning of the chain.</div>
+              </div>
+              <div class="tip-box tip-coral">
+                <div class="tip-box-icon">⬅️</div>
+                <div class="tip-box-text"><strong>Backward Chaining:</strong> Teach the last step first. The learner always gets to experience the sense of completion. Great for routines where the ending moment is motivating (e.g., putting on a shirt and "done!").</div>
+              </div>
+              <div class="tip-box tip-violet">
+                <div class="tip-box-icon">🔄</div>
+                <div class="tip-box-text"><strong>Total Task Chaining:</strong> The learner attempts every step every session, with prompts provided wherever needed. Best for learners who can handle the whole routine but need fading support across all steps simultaneously.</div>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Understanding prompt levels</div>
+              <p class="guide-p">For each step, record the <strong>least intrusive prompt</strong> used to get the learner to complete that step:</p>
+              <div class="steps-guide">
+                <div class="step-guide"><div class="step-guide-num" style="background:var(--teal);">I</div><div class="step-guide-text"><strong>Independent (I)</strong> — completed without any help. This is the goal!</div></div>
+                <div class="step-guide"><div class="step-guide-num" style="background:var(--blue, #2b5ea7);">VP</div><div class="step-guide-text"><strong>Verbal Prompt (VP)</strong> — a spoken instruction or cue was needed, like "Now rinse your hands."</div></div>
+                <div class="step-guide"><div class="step-guide-num" style="background:#8a6d00;">GP</div><div class="step-guide-text"><strong>Gestural Prompt (GP)</strong> — a point, nod, or gesture directed the learner to the next step.</div></div>
+                <div class="step-guide"><div class="step-guide-num" style="background:var(--coral);">PP</div><div class="step-guide-text"><strong>Partial Physical (PP)</strong> — a light touch or partial hand-over-hand was needed.</div></div>
+                <div class="step-guide"><div class="step-guide-num" style="background:var(--red, #b34040);">FP</div><div class="step-guide-text"><strong>Full Physical (FP)</strong> — full hand-over-hand assistance was required to complete the step.</div></div>
+                <div class="step-guide"><div class="step-guide-num" style="background:#6b4fa0;">X</div><div class="step-guide-text"><strong>Did Not Complete (X)</strong> — the learner did not complete the step even with maximum prompting.</div></div>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Step-by-step: How to collect task analysis data</div>
+              <div class="steps-guide">
+                <div class="step-guide"><div class="step-guide-num">1</div><div class="step-guide-text"><strong>Build your task analysis</strong> — list every step in order. Use one of the pre-built templates (hand washing, tooth brushing, etc.) or create your own. Be specific: each step should be a single observable action.</div></div>
+                <div class="step-guide"><div class="step-guide-num">2</div><div class="step-guide-text"><strong>Choose your chaining method</strong> — Forward, Backward, or Total Task. If you're unsure, Total Task is a safe default for most learners.</div></div>
+                <div class="step-guide"><div class="step-guide-num">3</div><div class="step-guide-text"><strong>Run through the routine with the learner.</strong> For each step, use the least intrusive prompt that results in the behavior, then tap the corresponding prompt level button (I, VP, GP, PP, FP, or X).</div></div>
+                <div class="step-guide"><div class="step-guide-num">4</div><div class="step-guide-text"><strong>Add a new session for each session date.</strong> Over time, you'll see prompt levels shift from FP → PP → GP → VP → I as the learner gains independence.</div></div>
+                <div class="step-guide"><div class="step-guide-num">5</div><div class="step-guide-text"><strong>Review the Summary tab</strong> to see each step's % independence across all sessions — a clear picture of what's mastered and what still needs work.</div></div>
+              </div>
+            </div>
+
+            <div class="guide-section">
+              <div class="guide-h2">Tips for parents & caregivers</div>
+              <div class="tip-box tip-gold">
+                <div class="tip-box-icon">🏠</div>
+                <div class="tip-box-text"><strong>Consistency is everything.</strong> Use the same steps in the same order every time. Even small changes (using a different sink, a different soap bottle) can affect performance. Share your task analysis with school staff and other caregivers so everyone is using the same sequence.</div>
+              </div>
+              <div class="tip-box tip-teal">
+                <div class="tip-box-icon">🌟</div>
+                <div class="tip-box-text"><strong>Celebrate independent steps.</strong> Even if your child needed a full physical prompt for 9 out of 10 steps, an independent step 3 is a genuine win worth celebrating enthusiastically.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="article-videos-section">
+            <div class="article-videos-label">▶ Video Tutorial — Task Analysis & Chaining</div>
+            <div class="article-video-grid">
+              <div class="article-video-item" id="av-t1">
+                <div class="video-thumb-wrap"><div class="video-thumb-placeholder" onclick="loadAV('av-t1','mIAJ8SKLkGY',14)"><div class="video-play-btn">▶</div></div></div>
+                <div class="article-video-caption"><span class="yt-icon">▶</span> Task Analysis & Chaining — Step-by-Step ABA Guide</div>
+                <button class="article-video-load" id="btn-av-t1" onclick="loadAV('av-t1','mIAJ8SKLkGY',14)">▶ Load Video</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool-embed-section">
+            <div class="tool-embed-label">Interactive Tool & Printable Sheet</div>
+            <p class="tool-embed-intro">Load a pre-built task (hand washing, tooth brushing, and more) or build your own step list. Track prompt levels session by session and watch independence grow in the Summary tab.</p>
+            <div class="tool-embed-btns">
+              <button class="btn-tool btn-violet" onclick="toggleTool('taskanalysis')">📋 Open Digital Tool</button>
+              <a class="btn-tool btn-outline" href="ABA_Task_Analysis_Sheet.pdf" download>⬇ Download PDF Sheet</a>
+            </div>
+            <div class="tool-iframe-wrap" id="tool-taskanalysis">
+              <div class="tool-iframe-bar">
+                <span>📋 Task Analysis & Chaining Tool</span>
+                <button class="tool-iframe-close" onclick="toggleTool('taskanalysis')">✕ Close</button>
+              </div>
+              <iframe src="aba_task_analysis_tracker.html" title="Task Analysis Tool"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /article-list -->
+  </div><!-- /page -->
+</section>
+
+<!-- ══ AD STRIP MID ═══════════════════════════════════════ -->
+<div class="ad-strip">
+  <div class="ad-strip-inner">
+    <div class="ad-zone ad-zone-banner">
+      <!-- REPLACE WITH GOOGLE ADSENSE UNIT -->
+      <div>
+        <div style="font-size:1.1rem;margin-bottom:4px;">📢</div>
+        <div style="font-weight:700;font-size:0.78rem;color:var(--muted);">Advertisement</div>
+        <div class="ad-zone-label">In-content Banner — Replace with Google AdSense unit</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SUPPORT / DONATE ════════════════════════════════════ -->
+<section class="support-section" id="support">
+  <div class="support-inner">
+    <div class="support-text-col">
+      <div class="support-eyebrow">☕ Support ABA Collect the Data</div>
+      <h2 class="support-title">Keep these resources <em>free forever</em></h2>
+      <p class="support-body">Every tool, guide, PDF, and video on ABA Collect the Data is — and always will be — completely free. If this site has helped you or a learner in your life, consider buying us a coffee. It keeps the lights on and lets us build more.</p>
+      <div class="support-stats">
+        <div class="support-stat">
+          <div class="support-stat-num">4</div>
+          <div class="support-stat-label">Free digital tools</div>
+        </div>
+        <div class="support-stat">
+          <div class="support-stat-num">4</div>
+          <div class="support-stat-label">Printable PDF sheets</div>
+        </div>
+        <div class="support-stat">
+          <div class="support-stat-num">7</div>
+          <div class="support-stat-label">Video tutorials</div>
+        </div>
+        <div class="support-stat">
+          <div class="support-stat-num">∞</div>
+          <div class="support-stat-label">Always free</div>
+        </div>
+      </div>
+    </div>
+    <div class="support-card-col">
+      <div class="support-card">
+        <div class="support-card-icon">☕</div>
+        <div class="support-card-title">Buy Us a Coffee</div>
+        <div class="support-card-sub">Every contribution, no matter the size, helps us keep building free ABA resources for therapists, educators, and families.</div>
+        <div class="donate-amounts">
+          <button class="donate-amt active" onclick="setDonate(this,'3')">$3</button>
+          <button class="donate-amt" onclick="setDonate(this,'5')">$5</button>
+          <button class="donate-amt" onclick="setDonate(this,'10')">$10</button>
+          <button class="donate-amt" onclick="setDonate(this,'25')">$25</button>
+        </div>
+        <div class="donate-custom-row">
+          <input type="number" class="donate-custom-input" id="donateCustom" placeholder="Custom amount..." min="1" oninput="clearDonateSelection()">
+        </div>
+        <button class="donate-btn" onclick="handleDonate()">
+          ☕ Support ABA Collect the Data
+        </button>
+        <div class="donate-platforms">
+          <a class="donate-platform-btn" href="https://buymeacoffee.com" target="_blank" rel="noopener">☕ Buy Me a Coffee</a>
+          <a class="donate-platform-btn" href="https://ko-fi.com" target="_blank" rel="noopener">🍵 Ko-fi</a>
+          <a class="donate-platform-btn" href="https://paypal.com" target="_blank" rel="noopener">💳 PayPal</a>
+        </div>
+        <div class="donate-thanks" id="donateThanks">
+          ❤️ Thank you so much! Your support means the world to us.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AFFILIATE RECOMMENDATIONS ══════════════════════════ -->
+<section class="affiliate-section" id="resources">
+  <div class="page">
+    <div class="section-eyebrow">Recommended Resources</div>
+    <div class="section-title">Tools & products we love</div>
+    <p class="section-sub affiliate-intro">Carefully selected resources for ABA professionals, educators, and families. Some links are affiliate links — we may earn a small commission at no cost to you.</p>
+
+    <div class="affiliate-grid">
+
+      <!-- ABA SOFTWARE -->
+      <div class="affiliate-card" style="border-top:3px solid var(--teal);">
+        <div class="aff-cat" style="color:var(--teal);">📱 ABA Data Software</div>
+        <div class="aff-icon-row">
+          <div class="aff-icon" style="background:var(--teal-l);">📊</div>
+          <div class="aff-name">CentralReach</div>
+        </div>
+        <div class="aff-desc">Industry-leading ABA practice management software with built-in data collection, scheduling, billing, and progress monitoring used by thousands of ABA clinics.</div>
+        <div class="aff-badge" style="background:var(--teal-l);color:var(--teal);">⭐ Most Popular for Clinics</div>
+        <a class="aff-link-btn" href="https://centralreach.com" target="_blank" rel="noopener" style="background:var(--teal);color:white;">Visit CentralReach →</a>
+      </div>
+
+      <div class="affiliate-card" style="border-top:3px solid var(--teal);">
+        <div class="aff-cat" style="color:var(--teal);">📱 ABA Data Software</div>
+        <div class="aff-icon-row">
+          <div class="aff-icon" style="background:var(--teal-l);">📈</div>
+          <div class="aff-name">Motivity</div>
+        </div>
+        <div class="aff-desc">Modern, intuitive ABA data collection app built specifically for behavior technicians and BCBAs. Clean interface, real-time graphing, and easy session notes.</div>
+        <div class="aff-badge" style="background:var(--teal-l);color:var(--teal);">⭐ Great for RBTs</div>
+        <a class="aff-link-btn" href="https://motivity.net" target="_blank" rel="noopener" style="background:var(--teal);color:white;">Visit Motivity →</a>
+      </div>
+
+      <!-- EXAM PREP -->
+      <div class="affiliate-card" style="border-top:3px solid var(--violet);">
+        <div class="aff-cat" style="color:var(--violet);">🎓 RBT Exam Prep</div>
+        <div class="aff-icon-row">
+          <div class="aff-icon" style="background:var(--violet-l);">📚</div>
+          <div class="aff-name">RBT Exam Coach</div>
+        </div>
+        <div class="aff-desc">Comprehensive RBT certification prep with practice exams, flashcards, and video lessons covering all BACB task list items including data collection methods.</div>
+        <div class="aff-badge" style="background:var(--violet-l);color:var(--violet);">📝 Pass First Time</div>
+        <a class="aff-link-btn" href="https://www.amazon.com/s?k=RBT+exam+study+guide" target="_blank" rel="noopener" style="background:var(--violet);color:white;">Find on Amazon →</a>
+      </div>
+
+      <div class="affiliate-card" style="border-top:3px solid var(--violet);">
+        <div class="aff-cat" style="color:var(--violet);">🎓 BCBA Exam Prep</div>
+        <div class="aff-icon-row">
+          <div class="aff-icon" style="background:var(--violet-l);">🏆</div>
+          <div class="aff-name">BCBA Study Materials</div>
+        </div>
+        <div class="aff-desc">Top-rated BCBA exam preparation books and online courses. Master measurement, single-subject design, behavior change procedures, and ethics.</div>
+        <div class="aff-badge" style="background:var(--violet-l);color:var(--violet);">📖 Highly Rated</div>
+        <a class="aff-link-btn" href="https://www.amazon.com/s?k=BCBA+exam+study+guide" target="_blank" rel="noopener" style="background:var(--violet);color:white;">Find on Amazon →</a>
+      </div>
+
+      <!-- SUPPLIES -->
+      <div class="affiliate-card" style="border-top:3px solid var(--coral);">
+        <div class="aff-cat" style="color:var(--coral);">🛒 Classroom Supplies</div>
+        <div class="aff-icon-row">
+          <div class="aff-icon" style="background:var(--coral-l);">🖱</div>
+          <div class="aff-name">Tally Counters & Timers</div>
+        </div>
+        <div class="aff-desc">Mechanical wrist counters, digital lap counters, and classroom timers — essential low-tech data collection tools for busy therapists and teachers.</div>
+        <div class="aff-badge" style="background:var(--coral-l);color:var(--coral);">🛒 Affordable Essentials</div>
+        <a class="aff-link-btn" href="https://www.amazon.com/s?k=tally+counter+wrist+ABA+therapy" target="_blank" rel="noopener" style="background:var(--coral);color:white;">Shop on Amazon →</a>
+      </div>
+
+      <div class="affiliate-card" style="border-top:3px solid var(--coral);">
+        <div class="aff-cat" style="color:var(--coral);">🛒 Classroom Supplies</div>
+        <div class="aff-icon-row">
+          <div class="aff-icon" style="background:var(--coral-l);">📋</div>
+          <div class="aff-name">Data Binder & Clipboard Kits</div>
+        </div>
+        <div class="aff-desc">Therapist data binders, clipboard storage systems, and organizational supplies to keep session sheets, graphs, and program books neat and accessible.</div>
+        <div class="aff-badge" style="background:var(--coral-l);color:var(--coral);">📦 Stay Organized</div>
+        <a class="aff-link-btn" href="https://www.amazon.com/s?k=ABA+therapy+data+binder+clipboard" target="_blank" rel="noopener" style="background:var(--coral);color:white;">Shop on Amazon →</a>
+      </div>
+
+      <!-- BOOKS -->
+      <div class="affiliate-card" style="border-top:3px solid var(--gold);">
+        <div class="aff-cat" style="color:var(--gold);">📖 Recommended Reading</div>
+        <div class="aff-icon-row">
+          <div class="aff-icon" style="background:var(--gold-l);">📗</div>
+          <div class="aff-name">Applied Behavior Analysis (Cooper et al.)</div>
+        </div>
+        <div class="aff-desc">The definitive ABA textbook used in university programs worldwide. Essential reading for anyone pursuing BCBA certification or deepening their understanding of behavior analysis.</div>
+        <div class="aff-badge" style="background:var(--gold-l);color:var(--gold);">📚 The Gold Standard</div>
+        <a class="aff-link-btn" href="https://www.amazon.com/s?k=Cooper+Heron+Heward+Applied+Behavior+Analysis" target="_blank" rel="noopener" style="background:var(--gold);color:white;">Find on Amazon →</a>
+      </div>
+
+      <div class="affiliate-card" style="border-top:3px solid var(--gold);">
+        <div class="aff-cat" style="color:var(--gold);">📖 For Parents & Caregivers</div>
+        <div class="aff-icon-row">
+          <div class="aff-icon" style="background:var(--gold-l);">👨‍👩‍👧</div>
+          <div class="aff-name">ABA Parenting Books</div>
+        </div>
+        <div class="aff-desc">Practical guides written for parents of children with autism and developmental disabilities — covering ABA basics, data collection, behavior strategies, and advocacy.</div>
+        <div class="aff-badge" style="background:var(--gold-l);color:var(--gold);">💛 Parent-friendly</div>
+        <a class="aff-link-btn" href="https://www.amazon.com/s?k=ABA+therapy+parent+guide+autism" target="_blank" rel="noopener" style="background:var(--gold);color:white;">Find on Amazon →</a>
+      </div>
+
+    </div>
+
+    <div class="aff-disclaimer">
+      <strong>Affiliate Disclosure:</strong> ABA Collect the Data participates in affiliate programs including Amazon Associates. When you click a link and make a purchase, we may earn a small commission at no additional cost to you. This helps us keep all tools and guides on this site completely free. We only recommend products we genuinely believe in.
+    </div>
+  </div>
+</section>
+
+<!-- ══ BOTTOM AD BANNER ════════════════════════════════════ -->
+<div class="ad-strip" style="margin-bottom:0;">
+  <div class="ad-strip-inner">
+    <div class="ad-zone ad-zone-banner">
+      <!-- REPLACE WITH GOOGLE ADSENSE UNIT -->
+      <div>
+        <div style="font-size:1.1rem;margin-bottom:4px;">📢</div>
+        <div style="font-weight:700;font-size:0.78rem;color:var(--muted);">Advertisement</div>
+        <div class="ad-zone-label">Footer Banner — Replace with Google AdSense unit</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ FOOTER ══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">📋 ABA Collect the Data</div>
+    <p class="footer-tagline">Free, practical ABA data collection tools, guides, and video tutorials for everyone involved in a learner's progress — from behavior technicians to parents at home.</p>
+    <div class="footer-disclaimer">
+      These tools are designed to support data collection and should be used in conjunction with guidance from a Board Certified Behavior Analyst (BCBA) or licensed professional. This site does not provide clinical advice or diagnosis. All tools are for educational and organizational purposes only. Embedded videos are hosted on YouTube and remain the property of their respective creators. ABA Collect the Data participates in the Amazon Associates affiliate program and other affiliate programs.
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── TOGGLE ARTICLES ─────────────────────────────────
+function toggleArticle(id) {
+  const body   = document.getElementById('body-' + id);
+  const toggle = document.getElementById('toggle-' + id);
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  toggle.classList.toggle('open', !isOpen);
+}
+
+function openArticle(id) {
+  const body   = document.getElementById('body-' + id);
+  const toggle = document.getElementById('toggle-' + id);
+  body.classList.add('open');
+  toggle.classList.add('open');
+}
+
+// ── TOGGLE TOOL IFRAMES ──────────────────────────────
+function toggleTool(id) {
+  const wrap = document.getElementById('tool-' + id);
+  const isOpen = wrap.classList.contains('open');
+  wrap.classList.toggle('open', !isOpen);
+  if (!isOpen) {
+    setTimeout(() => wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+  }
+}
+
+// ── NAV SCROLL ───────────────────────────────────────
+function scrollTo(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ── INTERSECTION OBSERVER for reveal ─────────────────
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(18px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    obs.observe(el);
+  });
+}
+
+// ── VIDEO LOADERS ─────────────────────────────────────
+function loadVid(cardId, videoId, startTime) {
+  const card = document.getElementById(cardId);
+  if (!card) return;
+  const wrap = card.querySelector('.video-thumb-wrap');
+  const placeholder = card.querySelector('.video-thumb-placeholder');
+  const btn = document.getElementById('btn-' + cardId);
+  const start = startTime ? '&start=' + startTime : '';
+  const iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0' + start;
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+  iframe.allowFullscreen = true;
+  iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;';
+  if (placeholder) placeholder.remove();
+  wrap.appendChild(iframe);
+  card.classList.add('playing');
+  if (btn) { btn.textContent = '✓ Playing'; btn.classList.add('loaded'); }
+}
+
+function loadAV(itemId, videoId, startTime) {
+  const item = document.getElementById(itemId);
+  if (!item) return;
+  const wrap = item.querySelector('.video-thumb-wrap');
+  const placeholder = item.querySelector('.video-thumb-placeholder');
+  const btn = document.getElementById('btn-' + itemId);
+  const start = startTime ? '&start=' + startTime : '';
+  const iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0' + start;
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+  iframe.allowFullscreen = true;
+  iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;';
+  if (placeholder) placeholder.remove();
+  wrap.appendChild(iframe);
+  if (btn) { btn.textContent = '✓ Playing'; btn.classList.add('loaded'); }
+}
+
+
+// ── EMAIL SIGNUP ──────────────────────────────────────────
+function submitEmail() {
+  const input = document.getElementById('emailInput');
+  const val = input.value.trim();
+  if (!val || !val.includes('@')) {
+    input.style.borderColor = '#d95f3b';
+    setTimeout(() => input.style.borderColor = '', 1500);
+    return;
+  }
+  // In production: send to your ESP (Mailchimp, ConvertKit, etc.) via API
+  // Example: fetch('/api/subscribe', { method:'POST', body: JSON.stringify({ email: val }) })
+  document.getElementById('emailForm').style.display = 'none';
+  document.getElementById('emailSuccess').classList.add('show');
+}
+
+// ── DONATE ─────────────────────────────────────────────────
+let donateSelected = '3';
+function setDonate(btn, amount) {
+  donateSelected = amount;
+  document.querySelectorAll('.donate-amt').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('donateCustom').value = '';
+}
+function clearDonateSelection() {
+  document.querySelectorAll('.donate-amt').forEach(b => b.classList.remove('active'));
+  donateSelected = null;
+}
+function handleDonate() {
+  const custom = document.getElementById('donateCustom').value;
+  const amount = custom || donateSelected || '5';
+  // In production: redirect to Buy Me a Coffee, Ko-fi, Stripe, or PayPal with amount
+  // Example: window.open('https://buymeacoffee.com/yourusername?amount=' + amount, '_blank');
+  document.getElementById('donateThanks').classList.add('show');
+  setTimeout(() => document.getElementById('donateThanks').classList.remove('show'), 4000);
+}
+
+</script>
+</body>
+</html>
