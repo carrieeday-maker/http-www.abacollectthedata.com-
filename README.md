@@ -1,0 +1,1 @@
+This website contains tools for both learners and seasoned field professionals who are just looking for simple templates to utilize in their daily data collection required activities. All provided resources are free for users. YouTube links have also been provided to help demonstrate different forms of data collections that may be used with the provided free materials. 
